@@ -397,7 +397,12 @@ class ReverieServer:
           # {"persona": {"Maria Lopez": {"movement": [58, 9]}},
           #  "persona": {"Klaus Mueller": {"movement": [38, 12]}}, 
           #  "meta": {curr_time: <datetime>}}
+          movementFolder = f"{sim_folder}/movement"
+          if not os.path.exists(movementFolder):
+              os.mkdir(movementFolder)
+              
           curr_move_file = f"{sim_folder}/movement/{self.step}.json"
+          #create_folder_if_not_there(curr_move_file)
           with open(curr_move_file, "w") as outfile: 
             outfile.write(json.dumps(movements, indent=2))
 
