@@ -1,4 +1,4 @@
-
+This repository is a fork of https://github.com/joonspk-research/generative_agents. It has been optimized to work in the OpenAI environment as of February 2024. 
 
 # Generative Agents: Interactive Simulacra of Human Behavior 
 
