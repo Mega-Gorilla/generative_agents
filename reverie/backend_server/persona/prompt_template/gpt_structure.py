@@ -88,7 +88,7 @@ def GPT4_safe_generate_response(prompt,
                                    fail_safe_response="error",
                                    func_validate=None,
                                    func_clean_up=None,
-                                   verbose=False): 
+                                   verbose=True): 
   prompt = 'GPT-3 Prompt:\n"""\n' + prompt + '\n"""\n'
   prompt += f"Output the response to the prompt above in json. {special_instruction}\n"
   prompt += "Example output json:\n"
@@ -132,7 +132,7 @@ def ChatGPT_safe_generate_response(prompt,
                                    fail_safe_response="error",
                                    func_validate=None,
                                    func_clean_up=None,
-                                   verbose=False): 
+                                   verbose=True): 
   # prompt = 'GPT-3 Prompt:\n"""\n' + prompt + '\n"""\n'
   prompt = '"""\n' + prompt + '\n"""\n'
   prompt += f"Output the response to the prompt above in json. {special_instruction}\n"
@@ -179,7 +179,7 @@ def ChatGPT_safe_generate_response_OLD(prompt,
                                    fail_safe_response="error",
                                    func_validate=None,
                                    func_clean_up=None,
-                                   verbose=False): 
+                                   verbose=True): 
   
   if verbose:
     print("-----"*10) 
@@ -274,7 +274,7 @@ def safe_generate_response(prompt,
                            fail_safe_response="error",
                            func_validate=None,
                            func_clean_up=None,
-                           verbose=False): 
+                           verbose=True): 
   if verbose:
     print("-----"*10) 
     print ("      CHAT GPT PROMPT")
